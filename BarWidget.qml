@@ -1,5 +1,6 @@
 import QtQuick
 import QtQuick.Layouts
+import qs.Modules.DesktopWidgets
 import Quickshell
 import qs.Commons
 import qs.Widgets
@@ -37,4 +38,16 @@ Rectangle {
       pointSize: Style.fontSizeS
     }
   }
+}
+DraggableDesktopWidget {
+  id: root
+
+  // Plugin API (injected by PluginService)
+  property var pluginApi: null
+
+  // Widget dimensions
+  implicitWidth: 200
+  implicitHeight: 120
+
+  // Your widget content here
 }
